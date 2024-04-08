@@ -27,7 +27,7 @@
     />
   </head>
   <body>
-    <header class="header-title">
+     <header class="header-title">
       <div class="header-container container">
         <nav class="header-nav">
           <a href="./index.html" class="logo">
@@ -54,8 +54,13 @@
             </li>
           </ul>
         </address>
+        <button class="burger-menu-btn" type="button">
+          <svg class="burger-btn-svg" width="24" height="24">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
-    </header>
+    </header> 
 
     <main>
       <section class="section-button-title">
@@ -65,8 +70,8 @@
         </div>
       </section>
 
-      <section class="additional-info">
-        <div class="additional-container">
+       <section class="additional-info">
+        <div class="container">
           <h2 class="additional-info-title visually-hidden">
             Additional Information
           </h2>
@@ -121,13 +126,22 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="our-team">
+      </section> 
+        <section class="our-team">
         <div class="container">
           <h2 class="our-team-title">Our Team</h2>
           <ul class="additional-info-list">
             <li class="team-list-title">
-              <img src="./images/mark.jpg" width="264" height="260" alt="Mark Guerrero" />
+              <img 
+                srcset="
+                ./images/desctop1x/descmark1x.png  1x,
+                ./images/desctop1x/descmark@2x.png 2x
+                "
+                src="./images/mark.jpg" 
+                width="264" 
+                height="260" 
+                alt="Mark Guerrero" 
+               />
               <div class="employee-info">
                 <h3 class="employee-name-title">Mark Guerrero</h3>
                 <p class="employee-position-paragraph">Product Designer</p>
@@ -164,9 +178,21 @@
               </div>
             </li>
             <li class="team-list-title">
-              <a href="#" class="team-list-a">
-                <img src="./images/tom.jpg" width="264" height="260" alt="Tom Ford" />
+              <div class="team-img-cont">
+                <a href="#" class="team-list-a">
+                <img 
+                srcset="
+                ./images/desctop1x/desctom1.png    1x,
+                ./images/desctop1x/desctom@2x.png  2x
+                "
+                src="./images/tom.jpg" 
+                width="264" 
+                height="260" 
+                alt="Tom Ford" 
+                />
+              </picture>
               </a>
+              </div>
               <div class="employee-info">
                 <h3 class="employee-name-title">Tom Ford</h3>
                 <p class="employee-position-paragraph">Frontend Developer</p>
@@ -203,7 +229,15 @@
               </div>
             </li>
             <li class="team-list-title">
-              <img src="./images/camila.jpg" width="264" height="260" alt="Camila Garcia" />
+              <img 
+              srcset="
+              ./images/desctop1x/desccamila1x.png  1x,
+              ./images/desctop1x/desccamila@2x.png 2x
+              "
+              src="./images/camila.jpg" 
+              width="264" 
+              height="260" 
+              alt="Camila Garcia" />
               <div class="employee-info">
                 <h3 class="employee-name-title">Camila Garcia</h3>
                 <p class="employee-position-paragraph">Marketing</p>
@@ -240,7 +274,16 @@
               </div>
             </li>
             <li class="team-list-title">
-              <img src="./images/daniel.jpg" width="264" height="260" alt="Daniel Wilson" />
+              <img 
+              srcset="
+              ./images/desctop1x/daniel@1x.png   1x,
+              ./images/desctop1x/descdan@2x.png  2x
+              "
+              src="./images/daniel.jpg" 
+              width="264" 
+              height="260" 
+              alt="Daniel Wilson" 
+              />
               <div class="employee-info">
                 <h3 class="employee-name-title">Daniel Wilson</h3>
                 <p class="employee-position-paragraph">UI Designer</p>
@@ -278,15 +321,19 @@
             </li>
           </ul>
         </div>
-      </section>      
+      </section> 
 
-      <section class="our-portfolio">
-        <div class="our-portfolio-container container">
+     <section class="our-portfolio">
+        <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="our-portfolio-ul">
             <li class="our-portfolio-li">
               <div class="our-portfolio-img">
                 <img
+                  srcset="
+                  ./images/desctop1x/decsbank1x.png  1x,
+                  ./images/desctop1x/descbank@2x.png 2x
+                  "
                   src="./images/bankingApp.jpg"
                   width="360"
                   height="300"
@@ -303,6 +350,10 @@
             <li class="our-portfolio-li">
               <div class="our-portfolio-img">
                 <img
+                srcset="
+                ./images/desctop1x/descdevice1x.png  1x,
+                ./images/desctop1x/descdevice2x.png  2x
+                "
                 src="./images/cashlessPayment.jpg"
                 width="360"
                 height="300"
@@ -319,6 +370,9 @@
             <li class="our-portfolio-li">
               <div class="our-portfolio-img">
                 <img
+                srcset="./images/desctop1x/desclaptop1x.png  1x,
+                ./images/desctop1x/desclaptop@2x.png         2x
+                "
                 src="./images/MeditaionApp.jpg"
                 width="360"
                 height="300"
@@ -335,6 +389,10 @@
             <li class="our-portfolio-li">
               <div class="our-portfolio-img">
                   <img
+                  srcset="
+                  ./images/desctop1x/decscar1x.png    1x,
+                  ./images/desctop1x/desccar@2x.png   2x
+                  "
                   src="./images/TaxiService.jpg"
                   width="360"
                   height="300"
@@ -351,6 +409,9 @@
             <li class="our-portfolio-li">
               <div class="our-portfolio-img">
                   <img
+                  srcset="./images/desctop1x/descmob1x.png   1x,
+                  ./images/desctop1x/descmobile@2x.png       2x
+                  "
                    src="./images/ScreenIllustrations.jpg"
                    width="360"
                    height="300"
@@ -367,6 +428,10 @@
             <li class="our-portfolio-li">
               <div class="our-portfolio-img">
                 <img
+                srcset="
+                ./images/desctop1x/desccourse1x.png   1x,
+                ./images/desctop1x/desccourse@2x.png  2x
+                "
                 src="./images/OnlineCourses.jpg"
                 width="360"
                 height="300"
@@ -382,9 +447,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section>    
     </main>
-    <footer class="footer">
+   <footer class="footer">
       <div class="container">
         <div class="container-logo-footer">
           <a class="logo footer-logo-link" href="./index.html">
@@ -399,7 +464,7 @@
           <p class="social-media-p">
             Social media
           </p>
-          <ul class="footer-team-pack">
+          <ul class="footer-team-pack socials">
             <li class="footer-team-item">
               <a href="https://www.instagram.com/" class="footer-team-link" target="_blank">
                 <svg width="24" height="24" class="footer-soc-icon">
@@ -451,9 +516,83 @@
           </form>
         </div>        
       </div>
-    </footer>
-  <!-- #region Modal    -->
-  <div class="backdrop">
+    </footer>  
+  <!-- #region mobile modal-->
+  <div class="mobile-menu">
+    <div class="mobile-menu-wrapper">
+      <button class="mobile-btn" type="button">
+        <svg class="mobile-btn-close" width="8" height="8" aria-label="close menu button">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="mobile-link mobile-studio"> Studio
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="" class="mobile-link">Portfolio
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="" class="mobile-link">Contacts
+          </a>
+        </li>
+      </ul>
+      <div class="mobile-adress">
+        <address class="modal-adress-title">
+          <ul class="modal-adress-ul">
+            <li>
+              <a href="mailto:info@devstudio.com" class="mobile-adress-link mail-mobile"
+                >info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+110001111111" class="mobile-adress-link"
+                >+11 (000) 111-11-11
+              </a>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div class="mobile-team-ul">
+        <ul class="footer-team-pack socials-team-pack">
+          <li class="footer-team-item">
+            <a href="https://www.instagram.com/" class="footer-team-link" target="_blank">
+              <svg width="24" height="24" class="footer-soc-icon">
+                <use href="./images/icons.svg#icon-instagram-without-color"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-team-item">
+            <a href="https://twitter.com/" class="footer-team-link" target="_blank">
+              <svg width="24" height="24" class="footer-soc-icon">
+                <use href="./images/icons.svg#icon-Group"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-team-item">
+            <a href="https://www.facebook.com/" class="footer-team-link" target="_blank">
+              <svg width="24" height="24" class="footer-soc-icon">
+                <use href="./images/icons.svg#icon-Vector"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-team-item">
+            <a href="https://www.linkedin.com/" class="footer-team-link" target="_blank">
+              <svg width="24" height="24" class="footer-soc-icon">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- #endregion mobile modal-->
+  
+    <!--  #region Modal    -->
+<div class="backdrop"> 
     <div class="modal">
         <button class="modal-button" type="button">
             <svg class="modal-btn-icon" width="8" height="8">
@@ -532,12 +671,11 @@
             <button type="submit" class="modal-button-send">Send</button>
         </form>
     </div>
-</div>
+</div> -->
     <!-- #endregion Modal --> 
-  
   </body>
 </html>
 
-       <!-- region --> 
+       <!-- region  -->
 
 
