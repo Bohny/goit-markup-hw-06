@@ -292,6 +292,29 @@ ul, li {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.section-button-title  {
+  background-image: url('../images/hero-bg.jpg');
+  background-image: -webkit-image-set(url('../images/desctop1x/mobDarkbg1x.png') 1x);
+  background-image: image-set(url('../images/desctop1x/mobDarkbg1x.png') 1x);
+}
+
+@media only screen and (min-width: 768px) {
+  .section-button-title  {
+    background-image: url('../images/hero-bg.jpg');
+    background-image: -webkit-image-set(url('../images/desctop1x/mobDarkbg1x.png') 1x);
+    background-image: image-set(url('../images/desctop1x/descbg2x.png') 2x);
+  }
+}
+
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .section-button-title  {
+    background-image: url('../images/hero-bg.jpg');
+    background-image: -webkit-image-set(url('../images/desctop1x/descbg2x.png') 2x);
+    background-image: image-set(url('../images/desctop1x/descbg2x.png') 2x);
+  }
+}
+
+
 .section-button-title {
   background-color: #2e2f42;
   color: #F4F4FD;
@@ -768,20 +791,42 @@ ul, ol {
 }
 
 
-
-.container-logo-footer {
-margin-right: 120px;
+@media only screen and (min-width: 1158px) {
+  .container-logo-footer {
+    margin-right: 120px;
+    }
 }
+
 
 .footer .container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 72px;
+
+}
+
+@media screen and (min-width:768px) {
+  .footer .container {
+   gap: 72px 24px;
+   flex-direction: row;
+   width: 584px;
+   flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer .container {
+    width: 1158px;
+    align-items: baseline;
+    gap: 0;
+  }
 }
 
 .footer-logo-link {
   display: inline-block;
   margin-bottom: 16px;
 }
+
 .social-media-p {
   font-weight: 500;
   font-size: 16px;
@@ -789,6 +834,12 @@ margin-right: 120px;
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px; 
+}
+
+@media only screen and (max-width: 767px) {
+  .social-media-p {
+    text-align: center;
+  }
 }
 
 .footer-team-pack {
@@ -834,21 +885,36 @@ margin-right: 120px;
   color: #ffffff;
 }
 
+@media only screen and (max-width: 767px) {
+  .subscribe-p {
+    text-align: center;
+  }
+}
+
 .form-element {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
+@media only screen and (min-width: 1158px) {
 .subscribe-cnt {
-  margin-top: 20px;
   margin-left: 80px;
 }
+}
+
 
 .form-element {
   display: flex;
   flex-direction: row;
   gap: 24px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-element {
+   flex-direction: row; 
+  }
 }
 
 .form-label {
@@ -880,7 +946,7 @@ margin-right: 120px;
 }
 
 .form-btn {
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -1002,12 +1068,15 @@ color: #2e2f42
 
 /* #region Modal Window */
 
-/* :root {
+:root {
   --label-color: #8e8f99;
 }
 
 
 .backdrop {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1015,6 +1084,12 @@ color: #2e2f42
   left: 0;
   background: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .footer-soc-icon {
